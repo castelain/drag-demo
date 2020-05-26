@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Demo</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div
+      id="left-box"
+      class="box"
+      ondrop="handleDrop(event)"
+      ondragover="handleDragOver(event)"
+    >
+      <span class="dashing">
+        <i></i>
+      </span>
+      <span class="dashing">
+        <i></i>
+      </span>
+      <span class="dashing">
+        <i></i>
+      </span>
+      <span class="dashing">
+        <i></i>
+      </span>
+      <p
+        id="drag-item"
+        draggable="true"
+        ondragstart="handleDragStart(event)"
+        ondrag="handleDrag(event)"
+        ondragend="handleDragEnd(event)"
+        ondragenter="handleDragEnter(event)"
+      >
+        Drag and Drop Me
+      </p>
+    </div>
+    <div
+      id="right-box"
+      class="box"
+      ondrop="handleDrop(event)"
+      ondragover="handleDragOver(event)"
+    >
+      <span class="dashing">
+        <i></i>
+      </span>
+      <span class="dashing">
+        <i></i>
+      </span>
+      <span class="dashing">
+        <i></i>
+      </span>
+      <span class="dashing">
+        <i></i>
+      </span>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

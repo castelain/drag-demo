@@ -1,0 +1,73 @@
+body {
+  background-color: whitesmoke;
+}
+.box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 20vh;
+  overflow: hidden;
+  background-color: lightsteelblue;
+}
+#left-box {
+  position: absolute;
+  left: 20vw;
+}
+#right-box {
+  position: absolute;
+  left: calc(20vw + 400px);
+}
+#drag-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  box-shadow: 0 0 4px white;
+  background-color: white;
+}
+#drag-item:hover {
+  color: turquoise;
+  cursor: pointer;
+}
+.dashing {
+  width: 100%;
+}
+.dashing > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 0;
+  border-bottom: 10px dashed white;
+  transform-origin: 0% 0%;
+  animation: slideDash 5s infinite linear;
+  -moz-animation: slideDash 5s infinite linear;
+  -o-animation: slideDash 5s infinite linear;
+  -webkit-animation: slideDash 5s infinite linear;
+}
+@keyframes slideDash {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+/* .dashing:nth-child(1) {
+  transform: rotate(0deg);
+}
+.dashing:nth-child(2) {
+  transform: rotate(-90deg);
+}
+.dashing:nth-child(3) {
+  transform: rotate(180deg);
+}
+.dashing:nth-child(4) {
+  transform: rotate(270deg);
+} */
